@@ -1,0 +1,3 @@
+id,fastq_1,fastq_2
+Sample1,data/Sample1.fq.gz,
+Sample4,data/Sample4.fq.gz,
