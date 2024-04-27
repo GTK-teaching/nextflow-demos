@@ -1,11 +1,16 @@
-Channel.from( ['Sample1','Sample2','Sample3','Sample4'] )
+
+nextflow.enable.dsl = 2
+
+
+channel.fromList( ['Sample1','Sample2','Sample3','Sample4'] )
         .set { samples }
+
 
 process make_file {
     tag "${output_file}"
 
     input:
-    val(sampleID) from samples
+    val(sampleID)
 
     output:
     file("${output_file}") into sample_files
